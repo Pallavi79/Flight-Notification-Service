@@ -1,0 +1,11 @@
+create db -> npx sequelize db:create
+
+add model-> npx sequelize model:generate --name <Name> --attribute <attribute1:datatype>,<attribute2:datatype>
+
+this is in git add stage
+to commit changes:
+
+npx sequelize db:migrate
+
+to undo changes:
+npx sequelize db:migrate:undo
