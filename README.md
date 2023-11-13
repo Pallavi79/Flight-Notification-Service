@@ -1,5 +1,4 @@
-This is a basic node js for airline reservation project template.
-
+This is notification service module for airline reservation project.
 ###  SETUP
 -Download this template from github and open it in your favourite text editor.
 -Go inside the project folder and run the following command

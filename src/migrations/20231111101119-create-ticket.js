@@ -1,8 +1,5 @@
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
-const {Enums} = require('../utils/common');
-const { PENDING, SUCCESS, FAILED } = Enums.STATUS_ENUMS;
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Tickets', {
@@ -14,21 +11,20 @@ module.exports = {
       },
       subject: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false,
       },
       content: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false,
       },
-      recepientName: {
+      recepientEmail: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false,
       },
       status: {
         type: Sequelize.ENUM,
-        values:[PENDING, SUCCESS, FAILED],
-        defaultValue:PENDING,
-        allowNull:false
+        values: ["PENDING", "SUCCESS", "FAILED"],
+        defaultValue: "PENDING",
       },
       createdAt: {
         allowNull: false,
